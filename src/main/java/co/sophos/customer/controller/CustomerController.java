@@ -30,16 +30,16 @@ public class CustomerController {
 		response.setStatus(status);
 		
 		Customer customer = new Customer();
-		customer.setAddress("Calle 160");
+		customer.setAddress("Autopista Sur");
 		customer.setBrirthDate(new Date());
 		customer.setCity("BOGOTA");
 		customer.setCountry("COLOMBIA");
-		customer.setEmail("jdiegobonp@gmail.com");
-		customer.setFirstName("JUAN DIEGO");
-		customer.setFullName("JUAN DIEGO BONILLA PARRA");
-		customer.setLastName("BONILLA PARRA");
+		customer.setEmail("xxxxxxx@gmail.com");
+		customer.setFirstName("RICARDO RENE");
+		customer.setFullName("RICARDO RENE RODRIGUEZ LOPEZ");
+		customer.setLastName("RODRIGUEZ LOPEZ");
 		customer.setId(id);
-		customer.setPhone("301-3295703");
+		customer.setPhone("301-1345678");
 		customer.setSex("M");
 		response.setCustomer(customer);
 		
