@@ -10,15 +10,10 @@ pipeline {
                     git url: 'https://github.com/juandiegobonilla/customerquery.git'
                }
           }
-          stage("Clean") {
-               steps {
-                    sh 'mvn clean'
-               }
-          }
-         stage("Package") {
-               steps {
-                    sh 'mvn package'
-               }
-          }
+        stage("Build"){
+             steps {
+                sh 'mvn -B -DskipTests clean package'                                   
+            }             
+        }        
     }
 }
