@@ -1,0 +1,27 @@
+version: '3'
+
+# Command docker stack deploy -c docker-compose.yml tw_
+# Define services
+services:
+  # App backend service
+  customerquery:
+    image: customerquery/compose  # Nombre de Imagen
+    build:
+      context: ./
+      dockerfile: DockerFile
+    deploy:
+      replicas: 2 # Replicas
+      resources: 
+        limits: 
+          cpus: "0.2"
+          memory: 300M
+      restart_policy:
+        condition: on-failure
+    ports:
+      - "9090:9090" # Puertos
+    networks:
+      - default
+networks:
+  default:
+    external:
+      name: services
