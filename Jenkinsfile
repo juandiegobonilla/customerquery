@@ -16,6 +16,14 @@ pipeline {
                steps {
                     sh 'mvn -B -DskipTests clean package' 
                }
+     
           }
+        stage("Docker"){
+            steps{                
+                script {
+                    def customImage = docker.build("customerQuery")
+                }   
+            }
+        }
     }
 }
