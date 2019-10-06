@@ -10,12 +10,6 @@ pipeline {
                steps {
                     sh 'mvn -B -DskipTests clean package' 
                }
-     
-          }
-        stage("Docker"){
-            steps{                
-                sh 'docker build -t customerquery .'
-            }
-        }
+         }
     }
 }
