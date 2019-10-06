@@ -20,9 +20,7 @@ pipeline {
           }
         stage("Docker"){
             steps{                
-                script {
-                    def customImage = docker.build("customerQuery")
-                }   
+                sh 'docker build -t customerquery .'
             }
         }
     }
